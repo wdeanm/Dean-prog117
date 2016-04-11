@@ -1,0 +1,20 @@
+{
+  "name": "angular-lists",
+  "homepage": "https://github.com/wdeanm/Prog219-markley-2016",
+  "authors": [
+    "W Dean Markley <wdeanm@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3"
+  }
+}
