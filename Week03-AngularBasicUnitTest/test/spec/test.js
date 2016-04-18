@@ -27,5 +27,9 @@ describe('Integration Tests', function() {
     it('should set elvenController.hint to "My hint."', function() {
         expect(elvenController.hint).toBe('My hint.');
     });
+    it('square function should be 25',function() {
+        expect(elvenController.square).toBe('25');
+        
+    })
 });
 
