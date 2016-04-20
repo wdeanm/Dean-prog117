@@ -28,11 +28,11 @@ describe('Integration Tests', function() {
         expect(elvenController.hint).toBe('My hint.');
     });
     it('square function should be 25',function() {
-        expect(elvenController.square).toBe(5 * 5);
+        expect(elvenController.square(5)).toBe(25);
        
     });
      it('add function should be 25',function() {
-        expect(elvenController.square).toBe(p1 + p2);
+        expect(elvenController.add(2,3)).toBe(5);
        
     });
 });
