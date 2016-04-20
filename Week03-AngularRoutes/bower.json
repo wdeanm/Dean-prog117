@@ -1,0 +1,22 @@
+{
+  "name": "Week03-Angular-Routes",
+  "description": "",
+  "main": "",
+  "authors": [
+    "W Dean Markley <wdeanm@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wdeanm/Prog219-markley-2016",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}
