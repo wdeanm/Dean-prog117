@@ -11,10 +11,10 @@ module.exports = function(config) {
 
         files: [
             'public/components/jquery/dist/jquery.min.js',
-            'node_modules/jasmine-jquery/lib/*.js',
-            'public/javascripts/*.js',
             'public/components/angular/angular.js',
             'public/components/angular-mocks/angular-mocks.js',
+            'node_modules/jasmine-jquery/lib/*.js',
+            'public/javascripts/*.js',
             'spec/**/*.html',
             'spec/test*.js'
         ],
