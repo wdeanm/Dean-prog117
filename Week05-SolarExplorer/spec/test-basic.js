@@ -38,11 +38,11 @@ describe('Elvenware Simple Plain Suite', function() {
         expect(true).toBe(true);
     });
 
-    fit('should find the index', function() {
+    it('should find the index', function() {
         expect(mainController.index).toBe(0);
     });
 
-    fit('should have a getRenewable method ', function() {
+    it('should have a getRenewable method ', function() {
         expect(mainController.getRenewable).toBeDefined();
     });
 
