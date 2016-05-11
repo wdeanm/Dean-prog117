@@ -50,6 +50,24 @@ describe('Elvenware Simple Plain Suite', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
     });
+    
+    fit('tests scope variable access in template loaded through fixture', function() {
+    // Get element from fixture
+    scope.renewable = [{
+        "Year": "2017",
+        "Solar (quadrillion Btu)": "0.8045307",
+        "Geothermal (quadrillion Btu)": "0.2349284",
+        "Other biomass (quadrillion Btu)": "0.50916",
+        "Wind power (quadrillion Btu)": "2.202328",
+        "Liquid biofuels (quadrillion Btu)": "1.2329197",
+        "Wood biomass (quadrillion Btu)": "1.9860924",
+        "Hydropower (quadrillion Btu)": "2.5859957"
+    }];
+
+    var el = document.getElementById('renewable');
+
+    // ETC. The rest of the code is nearly, but not exactly identical to the marie code.
+});
 
     it('tests scope variable access in template loaded through raw text', function() {
         $templateCache.put('marie',

@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('Week05AngularSolarExplorer:server');
+var debug = require('debug')('Week05AngularSolarExplorer-Markley:server');
 var http = require('http');
 
 /**
