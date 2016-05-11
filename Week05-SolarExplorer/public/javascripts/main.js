@@ -1,13 +1,10 @@
 var elfApp = angular.module("elfApp");
 	
-elfApp.controller('MainController', function($http) {
-//    var mainController = this;
-//    mainController.mainData = "Main Data";
+elfApp.controller('MainController', function($scope, $http) {
+    'use strict';
     $scope.mainData = "Main Data";
-
-//    mainController.index = 0;
     $scope.index = 0;
-
+    
     $scope.getRenewable = function() {
         console.log('getRenewable');
         $http.get('data/Renewable.json')

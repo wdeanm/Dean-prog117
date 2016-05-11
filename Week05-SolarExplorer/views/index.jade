@@ -1,4 +1,5 @@
 extends layout
+
 block content
   nav.navbar-inverse.navbar-fixed-top
     .container
@@ -10,8 +11,8 @@ block content
             a(ng-href='#/about') About
             
   .container
-  h1= title
-  p Welcome to #{title}
-
-  div(data-ng-view="")
+    h1= title
+    p Welcome to #{title}
+  
+    div(data-ng-view="")
   

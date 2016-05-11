@@ -28,7 +28,7 @@ describe('Elvenware Simple Mocks Suite', function() {
         expect($scope.index).toBe(0);
     });
 
-    fit('proves we can detect mock data', function() {
+    it('proves we can detect mock data', function() {
 
         var renewable = [{
             "Year": "2017",
