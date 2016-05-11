@@ -3,7 +3,6 @@ var elfApp = angular.module("elfApp");
 elfApp.controller('MainController', function($scope, $http) {
     //var $scpoe = this;
     $scope.mainData = "Main Data";
-
     $scope.index = 0;
     $scope.getRenewable = function() {
         console.log('getRenewable');
@@ -13,7 +12,6 @@ elfApp.controller('MainController', function($scope, $http) {
                 $scope.renewable = res.data;
             });
     }
-
 });
 
 elfApp.directive('elfRenewable', function() {
