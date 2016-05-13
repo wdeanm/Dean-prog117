@@ -25,7 +25,7 @@ describe('Elvenware Simple Plain Suite', function() {
 
     beforeEach(function() {
         jasmine.getFixtures().fixturesPath = 'base/spec/fixtures/';
-        loadFixtures('marie.html');
+        loadFixtures('renewable.html');
     });
 
     it('expects true to be true', function() {
@@ -33,16 +33,21 @@ describe('Elvenware Simple Plain Suite', function() {
     });
 
     it('should find the index', function() {
-        expect(mainController.index).toBe(0);
+        expect(scope.index).toBe(0);
     });
 
     it('should have a getRenewable method ', function() {
-        expect(mainController.getRenewable).toBeDefined();
+        expect(scope.getRenewable).toBeDefined();
     });
 
-    it('should be possible to access the fixture', function() {
+    it('should be possible to access the renewable fixture', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
+        console.log(spanElement);
+        expect(spanElement.innerHTML).toContain('Year');
+        expect(spanElement.innerHTML).toContain('biofuels');
+        expect(spanElement.innerHTML).toContain('biomass');
     });
-    
+
+
 });

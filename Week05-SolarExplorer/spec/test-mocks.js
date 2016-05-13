@@ -24,10 +24,6 @@ describe('Elvenware Simple Mocks Suite', function() {
         expect(true).toBe(true);
     });
 
-    it('should find the index', function() {
-        expect($scope.index).toBe(0);
-    });
-
     it('proves we can detect mock data', function() {
 
         var renewable = [{
@@ -47,8 +43,8 @@ describe('Elvenware Simple Mocks Suite', function() {
             .respond(renewable);
 
         $httpBackend.expectGET('data/Renewable.json');
-        $scope.getRenewable();
+        scope.getRenewable();
         $httpBackend.flush();
-        expect($scope.renewable[0].Year).toEqual('2017');
+        expect(scope.renewable[0].Year).toEqual('2017');
     })
 });

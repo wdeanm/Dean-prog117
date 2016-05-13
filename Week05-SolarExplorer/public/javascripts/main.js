@@ -1,25 +1,25 @@
 var elfApp = angular.module("elfApp");
-	
-elfApp.controller('MainController', function($scope, $http) {
+
+elfApp.controller('MainController', function ($scope, $http) {
     'use strict';
     $scope.mainData = "Main Data";
     $scope.index = 0;
-    
-    $scope.getRenewable = function() {
+
+    $scope.getRenewable = function () {
         console.log('getRenewable');
         $http.get('data/Renewable.json')
-            .then(function(res) {
+            .then(function (res) {
                 console.log(res.data[0]);
                 $scope.renewable = res.data;
             });
     }
 });
-	
-elfApp.directive('elfRenewable', function() {
+
+elfApp.directive('elfRenewable', function () {
     'use strict';
     return {
         controller: 'MainController',
-        templatUrl: 'renewable'
+        templateUrl: 'renewable'
 //        controllerAs: 'mainController',
 //        template: 'First: {{mainController.renewable[mainController.index].Year}} ' +
 //        '<br>Solar: {{mainController.renewable[mainController.index]["Solar (quadrillion Btu)"]}}' +
