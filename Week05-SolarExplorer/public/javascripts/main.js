@@ -19,7 +19,7 @@ elfApp.directive('elfRenewable', function() {
     'use strict';
     return {
         controller: 'MainController',
-        templatUrl: 'renewable'
+        templateUrl: 'renewable'
 //        controllerAs: 'mainController',
 //        template: 'First: {{mainController.renewable[mainController.index].Year}} ' +
 //        '<br>Solar: {{mainController.renewable[mainController.index]["Solar (quadrillion Btu)"]}}' +
