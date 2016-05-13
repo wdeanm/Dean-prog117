@@ -28,21 +28,15 @@ describe('Elvenware Simple Plain Suite', function() {
         loadFixtures('marie.html');
     });
 
-    it('should be possible to access the marie fixture', function() {
-        var spanElement = document.getElementById('marie');
-        expect(spanElement).toBeDefined();
-        expect(spanElement.innerHTML).toContain('First');
-    });
-
     it('expects true to be true', function() {
         expect(true).toBe(true);
     });
 
-    fit('should find the index', function() {
+    it('should find the index', function() {
         expect(mainController.index).toBe(0);
     });
 
-    fit('should have a getRenewable method ', function() {
+    it('should have a getRenewable method ', function() {
         expect(mainController.getRenewable).toBeDefined();
     });
 
@@ -50,29 +44,5 @@ describe('Elvenware Simple Plain Suite', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
     });
-
-    it('tests scope variable access in template loaded through raw text', function() {
-        $templateCache.put('marie',
-            '<div id="marie">' +
-            '   <p><span class="caption">First</span>: {{marie.firstName}}</p>' +
-            '   <p><span class="caption">Last</span>: {{marie.lastName}}</p>' +
-            '   <p><span class="caption">City</span>: {{marie.city}}</p>' +
-            '</div>');
-
-        var element = $compile('<elf-marie></elf-marie>')(scope);
-        scope.$digest();
-
-        // Check that the compiled element contains the templated content
-        expect(element.text()).toContain('Paris');
-    });
-
-    it('tests scope variable access in template loaded through fixture', function() {
-        // Get element from fixture
-        var el = document.getElementById('marie');
-        $templateCache.put('marie', el);
-        var element = $compile('<elf-marie></elf-marie>')(scope);
-        scope.$digest();
-        // Check that the compiled element contains the templated content
-        expect(element.text()).toContain('Paris');
-    });
+    
 });
