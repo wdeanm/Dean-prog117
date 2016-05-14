@@ -39,14 +39,14 @@ describe('Elvenware Simple Plain Suite', function() {
     });
 
     fit('should find the index', function() {
-        expect(mainController.index).toBe(0);
+        expect(scope.index).toBe(0);
     });
 
     fit('should have a getRenewable method ', function() {
-        expect(mainController.getRenewable).toBeDefined();
+        expect(scope.getRenewable).toBeDefined();
     });
 
-    it('should be possible to access the fixture', function() {
+    fit('should be possible to access the fixture', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
     });

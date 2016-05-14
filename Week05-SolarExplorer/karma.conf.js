@@ -13,13 +13,15 @@ module.exports = function(config) {
             'public/components/jquery/dist/jquery.min.js',
             'public/components/angular/angular.js',
             'public/components/angular-mocks/angular-mocks.js',
+            'public/components/angular-route/angular-route.js',
+            'public/components/jquery/dist/jquery.min.js',
             'node_modules/jasmine-jquery/lib/*.js',
             'public/javascripts/app.js', 
             'public/javascripts/*.js',
             'spec/**/*.html',
             'spec/test*.js'
         ],
-
+        
         // list of files to exclude
         exclude: [],
 
