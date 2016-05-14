@@ -32,12 +32,12 @@ describe('Elvenware Simple Plain Suite', function() {
         expect(true).toBe(true);
     });
 
-    it('should find the index', function() {
-        expect(mainController.index).toBe(0);
+    fit('should find the index', function() {
+        expect(scope.index).toBe(0);
     });
 
-    it('should have a getRenewable method ', function() {
-        expect(mainController.getRenewable).toBeDefined();
+    fit('should have a getRenewable method ', function() {
+        expect(scope.getRenewable).toBeDefined();
     });
 
     it('should be possible to access the fixture', function() {

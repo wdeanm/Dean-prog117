@@ -49,6 +49,6 @@ describe('Elvenware Simple Mocks Suite', function() {
         $httpBackend.expectGET('data/Renewable.json');
         $scope.getRenewable();
         $httpBackend.flush();
-        expect($scope.renewable[0].Year).toEqual('2017');
+        expect(scope.renewable[0].Year).toEqual('2017');
     })
 });
