@@ -4,7 +4,12 @@ myModule.config(function($routeProvider, $locationProvider) {
     $routeProvider.when("/", {
         templateUrl : "main",
         controller : "MainController"
-    }).when('/about', {
+    })
+    .when('/simple-format', {
+    templateUrl: 'simple-format-page',
+    controller: 'SimpleFormatController'
+    })
+    .when('/about', {
         templateUrl : "about",
         controller : "AboutController"
     }).otherwise({

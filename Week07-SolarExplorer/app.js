@@ -1,3 +1,4 @@
+// These files get loaded from layout.jade - cross reference with bower.json
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
