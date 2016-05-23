@@ -2,11 +2,11 @@ var myModule = angular.module("elfApp", [ 'ngRoute' ]);
 
 myModule.config(function($routeProvider, $locationProvider) {
     $routeProvider.when("/", {
-        templateUrl : "main",
+        templateUrl : "renewables/renewables-page",
         controller : "MainController"
     })
     .when('/simple-format', {
-    templateUrl: 'simple-format-page',
+    templateUrl: 'renewables/simple-format-page',
     controller: 'SimpleFormatController'
     })
     .when('/about', {
