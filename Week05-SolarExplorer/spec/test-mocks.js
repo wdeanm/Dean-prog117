@@ -6,6 +6,8 @@ describe('Elvenware Simple Mocks Suite', function() {
     // Set up the module
     beforeEach(module('elfApp'));
 
+
+
     beforeEach(inject(function(_$compile_, _$rootScope_, _$httpBackend_, _$controller_) {
         scope = _$rootScope_.$new();
         var $compile = _$compile_;
@@ -20,16 +22,16 @@ describe('Elvenware Simple Mocks Suite', function() {
         $httpBackend.verifyNoOutstandingRequest();
     });
 
-    it('proves we can run tests', function() {
+
+    it('test-mocks.js: proves we can run tests', function() {
         expect(true).toBe(true);
     });
 
-    it('should find the index', function() {
+    it('test-mocks.js: should find the index', function() {
         expect($scope.index).toBe(0);
     });
 
-    it('proves we can detect mock data', function() {
-
+    it('test-mocks.js: proves we can detect mock data', function() {
         var renewable = [{
             "Year": "2017",
             "Solar (quadrillion Btu)": "0.8045307",
@@ -47,7 +49,7 @@ describe('Elvenware Simple Mocks Suite', function() {
             .respond(renewable);
 
         $httpBackend.expectGET('data/Renewable.json');
-        $scope.getRenewable();
+        scope.getRenewable();
         $httpBackend.flush();
         expect(scope.renewable[0].Year).toEqual('2017');
     })

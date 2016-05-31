@@ -23,24 +23,24 @@ describe('Elvenware Simple Plain Suite', function() {
         });
     }));
 
-    beforeEach(function() {
+  /*  beforeEach(function() {
         jasmine.getFixtures().fixturesPath = 'base/spec/fixtures/';
         loadFixtures('marie.html');
     });
-
-    it('expects true to be true', function() {
+*/
+    fit('test-basic.js expects true to be true', function() {
         expect(true).toBe(true);
     });
 
-    fit('should find the index', function() {
+    fit('test-basic.js should find the index', function() {
         expect(scope.index).toBe(0);
     });
 
-    fit('should have a getRenewable method ', function() {
+    fit('test-basic.js should have a getRenewable method ', function() {
         expect(scope.getRenewable).toBeDefined();
     });
 
-    it('should be possible to access the fixture', function() {
+    fit(' test-basic.js should be possible to access the fixture', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
     });
