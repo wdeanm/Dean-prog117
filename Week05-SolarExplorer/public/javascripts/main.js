@@ -1,5 +1,6 @@
 var elfApp = angular.module("elfApp");
-	
+
+/*	
 elfApp.controller('MainController', function($scope, $http) {
     'use strict';
     $scope.mainData = "Main Data";
@@ -14,6 +15,24 @@ elfApp.controller('MainController', function($scope, $http) {
             });
     }
 });
+*/
+
+elfApp.controller('MainController', function($scope, $http, renewableUtils) {
+
+     // CODE FOR mainData and index THAT HAS NOT CHANGED OMITTED HERE
+
+     $scope.getRenewable = function() {
+         // console.log('getRenewable');
+         $http.get('data/Renewable.json')
+             .then(function(res) {
+                 renewableUtils.init(res.data);
+                 $scope.renewable = res.data;
+                 $scope.renewableUtils = renewableUtils;
+                 $scope.simpleFormat = renewableUtils.getSimpleFormat();
+             });
+     };
+
+})
 	
 elfApp.directive('elfRenewable', function() {
     'use strict';
@@ -31,3 +50,4 @@ elfApp.directive('elfRenewable', function() {
 //        '<br>Hydropower: {{mainController.renewable[mainController.index]["Hydropower (quadrillion Btu)"]}}' 
     };
 });
+
