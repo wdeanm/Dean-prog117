@@ -17,6 +17,7 @@ elfApp.controller('MainController', function($scope, $http) {
 });
 */
 
+
 elfApp.controller('MainController', function($scope, $http, renewableUtils) {
 
      // CODE FOR mainData and index THAT HAS NOT CHANGED OMITTED HERE
