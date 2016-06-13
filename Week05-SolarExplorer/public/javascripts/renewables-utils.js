@@ -16,7 +16,7 @@ function RenewableUtils() {
     };
 
     this.getByIndex = function(index) {
-         return renewables[index];
+        return renewables[index];
     };
 
     this.getYears = function() {
@@ -27,22 +27,11 @@ function RenewableUtils() {
 
     this.getWood = function() {
         return renewables.map(function(renewable) {
-            return {wood: renewable['Wood biomass (quedrillion Btu)'] };
+            return {
+                wood: renewable['Wood biomass (quedrillion Btu)']
+            };
         });
     };
-    
- /*  
-    this.getSimplestringFormat = function() {
-        return renewables.map (function(renewable) {
-            return {
-                solar: renewable[solar btu ....],
-                geo: renewable[],
-                wind: reneable[]
-                
-            });
-        };
-    };    
-*/
-};
+}
 
 elfApp.service('renewableUtils', RenewableUtils);

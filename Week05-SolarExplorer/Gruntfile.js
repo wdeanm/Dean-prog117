@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
             options: {
                 ignores: [
-                    '**/node_modules/**', '**/components/**'
+                    '**/node_modules/**', '**/components/**', '**/data/**'
                 ],
                 reporter: require('jshint-stylish'),
                 strict: true,
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 
         clean: {
             yourTarget: {
-                src: ['**/node_modules/**', '**/components/**']
+                src: ['**/node_modules/**', '**/components/**', '**/data/**']
             }
         },
 
@@ -32,7 +32,9 @@ module.exports = function(grunt) {
         },
 
         'jsbeautifier': {
-            files: ['**/*.js', '!**/node_modules/**', '!**/components/**'],
+            files: ['**/*.js', '!**/node_modules/**', '!**/components/**',
+                '!**/data/**'
+            ],
             options: {
                 'indentSize': 4
             }
@@ -60,7 +62,7 @@ module.exports = function(grunt) {
                 }
             }
         },
- 
+
         karma: {
             karma: {
                 configFile: 'karma.conf.js'

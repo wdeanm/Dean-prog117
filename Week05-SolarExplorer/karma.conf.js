@@ -16,7 +16,7 @@ module.exports = function(config) {
             'public/components/angular-route/angular-route.js',
             'node_modules/jasmine-jquery/lib/*.js',
             'public/components/jquery/dist/jquery.min.js',
-            'public/javascripts/app.js', 
+            'public/javascripts/app.js',
             'public/javascripts/*.js',
             'spec/**/*.html',
             'spec/data/*.js',
@@ -28,11 +28,15 @@ module.exports = function(config) {
 
         reporters: ['spec'],
 
-        specReporter: { suppressSkipped: true },
+        specReporter: {
+            suppressSkipped: true
+        },
 
         // web server port
         port: 9876,
-        preprocessors: { '**/*.html': [] },
+        preprocessors: {
+            '**/*.html': []
+        },
 
         // enable / disable colors in the output (reporters and logs)
         colors: true,

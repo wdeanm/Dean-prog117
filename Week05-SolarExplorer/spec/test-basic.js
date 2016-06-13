@@ -23,7 +23,7 @@ describe('Elvenware Simple Plain Suite', function() {
         });
     }));
 
-  /*  beforeEach(function() {
+    /*  beforeEach(function() {
         jasmine.getFixtures().fixturesPath = 'base/spec/fixtures/';
         loadFixtures('marie.html');
     });
@@ -44,5 +44,5 @@ describe('Elvenware Simple Plain Suite', function() {
         var spanElement = document.getElementById('renewable');
         expect(spanElement).toBeDefined();
     });
-    
+
 });
