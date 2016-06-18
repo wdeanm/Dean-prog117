@@ -5,14 +5,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     'use strict';
     res.render('index', {
-        title: 'Week05-AngularSolarExplorer-Markley'
+        title: 'Week07-AngularSolarExplorer-Markley'
     });
 });
 
 router.get('/:id', function(req, res, nest) {
     'use strict';
     res.render(req.params.id, {
-        title: 'Week-05-AngularSolarExplorer-Markley'
+        title: 'Week-07-AngularSolarExplorer-Markley'
     });
 });
 

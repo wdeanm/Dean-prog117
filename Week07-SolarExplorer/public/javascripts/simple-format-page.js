@@ -1,6 +1,6 @@
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('MainController', function($scope, $http, renewableUtils) {
+elfApp.controller('SimpleFormatController', function($scope, $http, renewableUtils) {
     // CODE FOR mainData and index THAT HAS NOT CHANGED OMITTED HERE
     'use strict';
     $scope.getRenewable = function() {
@@ -15,19 +15,10 @@ elfApp.controller('MainController', function($scope, $http, renewableUtils) {
     };
 });
 
-elfApp.directive('elfRenewable', function() {
+elfApp.directive('elfSimpleFormat', function() {
     'use strict';
     return {
-        controller: 'MainController',
-        templateUrl: 'renewable'
+        controller: 'SimpleFormatController',
+        templateUrl: 'simple-format'
     };
-});
-
-
-elfApp.directive('elfSimpleFormat', function() {
-  'use strict';
-  return {
-      controller: 'MainController',
-      templateUrl: 'simple-format'
-  };
 });

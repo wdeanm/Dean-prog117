@@ -1,7 +1,12 @@
-#simpleFormat
-    |     Solar: {{simpleFormat[index].solar}}
-    br
-    |     Geo: {{simpleFormat[index].geo}}
-    br
-    |     Wind: {{simpleFormat[index].wind}}
-  
+p This is simple format
+
+button.btn.btn-primary(ng-click="getRenewable()") Simple Format
+
+div
+    label
+        | Display Record:
+        input(type='number', name='input', ng-model='index', min='0', max='10', required='')
+
+hr
+
+elf-simple-format
