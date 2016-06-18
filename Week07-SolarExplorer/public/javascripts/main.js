@@ -22,3 +22,12 @@ elfApp.directive('elfRenewable', function() {
         templateUrl: 'renewable'
     };
 });
+
+
+elfApp.directive('elfSimpleFormat', function() {
+  'use strict';
+  return {
+      controller: 'MainController',
+      templateUrl: 'simple-format'
+  };
+});

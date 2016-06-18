@@ -5,6 +5,9 @@ myModule.config(function($routeProvider, $locationProvider) {
     $routeProvider.when('/', {
         templateUrl: 'main',
         controller: 'MainController'
+    }).when('/simple-format', {
+        templateUrl: 'simple-format',
+        controller: 'SimpleFormatController'    
     }).when('/about', {
         templateUrl: 'about',
         controller: 'AboutController'
