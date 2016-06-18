@@ -8,6 +8,9 @@ myModule.config(function($routeProvider, $locationProvider) {
     }).when('/simple-format', {
         templateUrl: 'simple-format',
         controller: 'SimpleFormatController'
+    }).when('/renewable-by-year', {
+        templateUrl: 'renewablebyyear',
+        controller: 'RenewableByYearController'
     }).when('/about', {
         templateUrl: 'about',
         controller: 'AboutController'

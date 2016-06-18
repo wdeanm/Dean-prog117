@@ -1,24 +1,21 @@
 var elfApp = angular.module('elfApp');
 
-elfApp.controller('MainController', function($scope, $http, renewableUtils) {
+elfApp.controller('RenewableByYearController', function($scope, $http, renewableUtils) {
     // CODE FOR mainData and index THAT HAS NOT CHANGED OMITTED HERE
     'use strict';
-    $scope.getRenewable = function() {
-        // console.log('getRenewable');
-        $http.get('data/Renewable.json')
-            .then(function(res) {
-                renewableUtils.init(res.data);
-                $scope.renewable = res.data;
-                $scope.renewableUtils = renewableUtils;
-                $scope.simpleFormat = renewableUtils.getSimpleFormat();
-            });
+
+    $scope.getByYear = function(year) {
+        var renewableData = $scope.renewableUtils.getByYear(year);
+        $scope.index = renewableData.index;
+        $scope.renewableByYear = renewableData.renewable;
+        return $scope.renewableByYear;
     };
 });
 
 elfApp.directive('elfRenewable', function() {
     'use strict';
     return {
-        controller: 'MainController',
-        templateUrl: 'renewable'
+        controller: 'RenewableByYearController',
+        templateUrl: 'renewablebyyear'
     };
 });
