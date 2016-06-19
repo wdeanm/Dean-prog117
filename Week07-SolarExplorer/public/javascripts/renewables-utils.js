@@ -32,6 +32,31 @@ function RenewableUtils() {
             };
         });
     };
+
+    this.getSimpleFormat = function() {
+        return renewables.map(function(renewable) {
+            return {
+                solar: parseFloat(renewable['Solar (quadrillion Btu)']),
+                geo: parseFloat(renewable['Geothermal (quadrillion Btu)']),
+                wind: parseFloat(renewable['Wind power (quadrillion Btu)'])
+            };
+        });
+    };
+
+    this.getRenewableByYear = function() {
+        return renewables.map(function(renewable) {
+            return {
+                first: parseFloat(renewable.year),
+                solar: parseFloat(renewable['Solar (quadrillion Btu)']),
+                geo: parseFloat(renewable['Geothermal (quadrillion Btu)']),
+                other: parseFloat(renewable['Other biomass (quadrillion Btu)']),
+                wind: parseFloat(renewable['Wind power (quadrillion Btu)']),
+                liquid: parseFloat(renewable['Liquid biofuels (quadrillion Btu)']),
+                wood: parseFloat(renewable['Wood biomass (quadrillion Btu)']),
+                hydropower: parseFloat(renewable['Hydropower (quadrillion Btu)'])
+            };
+        });
+    };
 }
 
 elfApp.service('renewableUtils', RenewableUtils);

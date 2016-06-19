@@ -10,8 +10,7 @@ elfApp.controller('RenewableByYearController', function($scope, $http, renewable
                 renewableUtils.init(res.data);
                 $scope.renewable = res.data;
                 $scope.renewableUtils = renewableUtils;
-                $scope.simpleFormat = renewableUtils.getSimpleFormat();
-                $scope.renewablesbyyear = renewableUtils.getRenewableByYear();
+                $scope.renewablesByYear = renewableUtils.getRenewableByYear();
             });
     };
 });

@@ -1,16 +1,17 @@
 #renewablebyyear
-  |     First: {{renewable-By-Year.Year}}
+  |     First: {{renewableByYear[index].first}}
   br
-  |     Solar: {{renewableByYear[index]["Solar (quadrillion Btu)"]}}
+  |     Solar: {{renewableByYear[index].solar}}
   br
-  |     Geothermal: {{renewableByYear[index]["Geothermal (quadrillion Btu)"]}}
+  |     Geothermal: {{renewableByYear[index].geo}}
   br
-  |     Other biomass: {{renewableByYear[index]["Other biomass (quadrillion Btu)"]}}
+  |     Other biomass: {{renewableByYear[index].other}}
   br
-  |     Wind power: {{renewableByYear[index]["Wind power (quadrillion Btu)"]}}
+  |     Wind power: {{renewableByYear[index].wind}}
   br
-  |     Liquid biofuels: {{renewableByYear[index]["Liquid biofuels (quadrillion Btu)"]}}
+  |     Liquid biofuels: {{renewableByYear[index].liquid}}
   br
-  |     Wood biomass: {{renewableByYear[index]["Wood biomass (quadrillion Btu)"]}}
+  |     Wood biomass: {{renewableByYear[index].wood}}
   br
-  |     Hydropower: {{renewableByYear[index]["Hydropower (quadrillion Btu)"]}}
+  |     Hydropower: {{renewableByYear[index].hydropower}}
+               
