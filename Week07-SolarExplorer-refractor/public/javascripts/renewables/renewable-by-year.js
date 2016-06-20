@@ -17,6 +17,6 @@ elfApp.directive('elfRenewablebyyear', function() {
     'use strict';
     return {
         controller: 'RenewableByYearController',
-        templateUrl: 'renewablebyyear'
+        templateUrl: 'renewables/renewablebyyear'
     };
 });

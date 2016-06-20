@@ -3,13 +3,13 @@ var myModule = angular.module('elfApp', ['ngRoute']);
 myModule.config(function($routeProvider, $locationProvider) {
     'use strict';
     $routeProvider.when('/', {
-        templateUrl: 'main',
+        templateUrl: 'renewables/renewable-page',
         controller: 'MainController'
     }).when('/simple-format', {
-        templateUrl: '/simple-format-page',
+        templateUrl: '/renewables/simple-format-page',
         controller: 'SimpleFormatController'
     }).when('/renewable-by-year', {
-        templateUrl: 'renewable-by-year-page',
+        templateUrl: '/renewables/renewable-by-year-page',
         controller: 'RenewableByYearController'
     }).when('/about', {
         templateUrl: 'about',
